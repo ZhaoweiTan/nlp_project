@@ -10,7 +10,6 @@ for line in f:
 	if line[-1] == '\n':
 		line = line[:-1]
 	l = line.split(' ')
-	del(l[-2])
 	string_bigrams = bigrams(l)
 	for grams in string_bigrams:
 		if not grams[0] in d1:
@@ -21,11 +20,14 @@ for line in f:
 		d2[grams[1]] = d2[grams[1]] + 1
 f.close()
 
+print "train_close"
+
+
 n = 0
 ncorrect = 0
 
 
-f = open('cootek_sjtu/train.txt')
+f = open('cootek_sjtu/english.corpus.txt')
 for line in f:
 	n = n + 1
 	if line[-1] == '\n':
