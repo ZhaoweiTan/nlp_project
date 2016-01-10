@@ -1,5 +1,5 @@
 def syn(s, freq):
-	return float(freq) / s / s / s / s
+	return float(freq) / s / s 
 
 import nltk
 import time
@@ -28,8 +28,8 @@ for line in f:
 		if not grams[1] in d2:
 			d2[grams[1]] = 0
 		d2[grams[1]] = d2[grams[1]] + 1
-
 f.close()
+
 print "train_close"
 
 mid = time.clock()
